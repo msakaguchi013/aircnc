@@ -6,10 +6,10 @@ import camera from '../../assets/camera.svg';
 import './styles.css';
 
 export default function New({ history }){
+    const [thumbnail,setThumbnail] = useState(null);
     const [company,setCompany] = useState('');
     const [techs,setTechs] = useState('');
     const [price,setPrice] = useState('');
-    const [thumbnail,setThumbnail] = useState(null);
 
     const preview = useMemo(() => {
         return thumbnail ? URL.createObjectURL(thumbnail) : null;
